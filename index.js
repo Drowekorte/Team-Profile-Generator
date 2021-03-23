@@ -1,87 +1,123 @@
 const inquirer = require("inquirer");
-const generateHTML = require("/index.html");
+const fs = require("fs");
+
+// const generateHTML = require("/generateHTML.js");
+// const employeeParentClass = require("/classes/employeeParentClass.js");
+// const engineerSubClass = require("/classes/engineerSubClass.js");
+// const managerSubClass = require("/classes/managerSubClass.js");
+// const internSubClass = require("/classes/internSubClass.js");
 
 
-// Manager gets officeNumber and getRole()over-written to return 'Manager'.
-// Engineer gets github username, getGithub() and getRole()over-written to return 'Engineer'.
-// Manager gets officeNumber and getRole()over-written to return 'Manager'.
+// manager.generateHTML();
+// companyEmployee.getRole();
+// companyEmployee.getRole();
+// getName()
+// getId()
+// getEmail()
+// getRole()
+// getRole() —returns 'Employee'
 
-class Employee {
-    constructor(id, employeeName, employeeEmail,) {
-        this.id = id;
-        this.employeeName = employeeName;
-        this.employeeEmail = employeeEmail;
+
+const questions = [
+    {
+        type: 'list',
+        name: 'employeeInfo',
+        message: 'What type of employee would you like to add?',
+        choices: ["Manager", "Engineer", "Intern"]
     }
+]
+
+//  const moreQuestions = 
 
 
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, generateHTML(data), () => { }
+    );
 };
 
-class Manager extends Employee {
-    constructor(id, employeeName, employeeEmail) {
-        super(officeNumber, getRole);
-        this.employeeRole = this.managerRole
-    };
-
-
-
-    const companyEmployee = new Manager(data.id, data.getRole, data.getofficeNumber);
-    // manager.generateHTML();
-    // companyEmployee.getRole();
-    // companyEmployee.getRole();
-    // getName()
-    // getId()
-    // getEmail()
-    // getRole()
-    // getRole() —returns 'Employee'
-
-    inquirer.prompt([
-        {
-        type: 'list',
-        name: 'employee',
-        message: 'What type of employee would you like to add?',
-        choices: ["Manager", "Engineer", "Intern", "I'm done"]
-    }])
-
-    .then(function (employee) {
-
-                console.log(response);
-                switch (employee) {
-                    case "Manager":
-                        inquirer
-                            .prompt
-                        break;
-                    case "Engineer":
-            inquirer.prompt([ {
-                        name: "name",
-                        message: "What is their name?",
-                        type: "list",
-                        choices: ["Engineer", "Intern", "I'm done"],
-            }
+function init() {
+    inquirer.prompt(questions)
+        .then(function (employee) {
+            switch (employee.employeeInfo) {
+                case "Manager":
+                    inquirer.prompt([
+                        {
+                            type: 'input',
+                            name: 'employeeName',
+                            message: 'What is their name?',
+                        },
+                        {
+                            type: 'input',
+                            name: 'employeeName',
+                            message: 'What is their id?',
+                        },
+                        {
+                            type: 'input',
+                            name: 'employeeEmail',
+                            message: 'What is the office number?',
+                        },
+                        {
+                            type: 'input',
+                            name: 'officeNum',
+                            message: 'What is the office number?',
+                        }
                     ])
-                        break;
-                    case "Intern":
-                        break;
-                    case "I'm done":
-                        break;
-                }
+                    break;
+                case "Engineer":
+                    inquirer.prompt([
+                        {
+                            type: 'input',
+                            name: 'employeeName',
+                            message: 'What is their name?',
+                        },
+                        {
+                            type: 'input',
+                            name: 'employeeName',
+                            message: 'What is their id?',
+                        },
+                        {
+                            type: 'input',
+                            name: 'employeeEmail',
+                            message: 'What is the office number?',
+                        },
+                        {
+                            type: 'input',
+                            name: 'github',
+                            message: 'What is their GitHub username?',
+                        }
+                    ])
+                    break;
+                case "Intern":
+                    inquirer.prompt([
+                        {
+                            type: 'input',
+                            name: 'employeeName',
+                            message: 'What is their name?',
+                        },
+                        {
+                            type: 'input',
+                            name: 'employeeName',
+                            message: 'What is their id?',
+                        },
+                        {
+                            type: 'input',
+                            name: 'employeeEmail',
+                            message: 'What is the office number?',
+                        },
+                        {
+                            type: 'input',
+                            name: 'school',
+                            message: 'What school do they attend?',
+                        }
+                    ])
+                    break;
+            }
 
-            });
+        });
+    // generateHTML();
 
+    // writeToFile("index.html", data)
+    // Function call to initialize app
+}
 
-
-
-
-
-// // TODO: Create a function to initialize app
-// function init() {
-//     inquirer.prompt(questions)
-//         .then(function (data) {
-//             writeToFile("README.md", data)
-//         })
-//     // generateMarkdown();
-
-
-//     // Function call to initialize app
-// }
-
-// init()
+init()
