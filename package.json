@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "github-username": "^6.0.0",
     "inquirer": "^8.0.0"
   },
   "devDependencies": {},

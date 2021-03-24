@@ -1,6 +1,4 @@
-// Manager gets officeNumber and getRole()over-written to return 'Manager'.
-// Engineer gets github username, getGithub() and getRole()over-written to return 'Engineer'.
-// Manager gets officeNumber and getRole()over-written to return 'Manager'.
+const index = require("../index.js")
 
 class Employee {
     constructor(id, employeeName, employeeEmail,) {
@@ -10,9 +8,8 @@ class Employee {
     }
 };
 
-function employeeParentClass(data.Employee){
-
-}
+const generateNewEmployee = new Employee (this.id, this.employeeName, this.employeeEmail);
+// generateNewEmployee.writeToFile();
 
 
 module.exports = Employee

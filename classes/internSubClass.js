@@ -3,10 +3,8 @@ class Intern extends Employee {
         super(school, getSchool, getRole);
         this.school = school;
         this.getSchool = getSchool;
-        this.getRole = getRole;
-};
+    };
 }
-
 
 const internEmployee = new Intern(data.id, data.getRole, data.getofficeNumber);
 

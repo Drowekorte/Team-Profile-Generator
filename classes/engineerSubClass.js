@@ -3,10 +3,8 @@ class Engineer extends Employee {
         super(github, getRole);
         this.github = github;
         this.getGithub = getGithub;
-        this.getRole = getRole;
-};
+    };
 }
-
 
 const engineerEmployee = new Engineer(data.id, data.getRole, data.getofficeNumber);
 
