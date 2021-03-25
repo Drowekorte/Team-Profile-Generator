@@ -1,9 +1,10 @@
 class Intern extends Employee {
-    constructor(id, employeeName, employeeEmail) {
-        super(school, getSchool, getRole);
-        this.school = school;
-        this.getSchool = getSchool;
-    };
+    constructor(school) {
+            this.school = school;
+        }
+        getSchool(){
+            return 
+        }
 }
 
 const internEmployee = new Intern(data.id, data.getRole, data.getofficeNumber);

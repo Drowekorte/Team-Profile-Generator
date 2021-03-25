@@ -3,12 +3,15 @@ const fs = require("fs");
 const { engineerPrompts, internPrompts, managerPrompts } = require("./prompt/prompts");
 const Employee = require("./classes/employeeParentClass.js");
 // const githubUsername = require('github-username');
-// const generateHTML = require("/generateHTML.js");
+// const generateHTML = require("./util/generateHTML.js");
+
+
 init();
 
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName, generateHTML(data), () => { }
-    );
+    console.log(data);
+    // fs.writeFile(fileName, generateHTML(data), () => { }
+    // );
 };
 
 function init() {

@@ -1,9 +1,9 @@
 const inquirer = require("inquirer");
-const githubUsername = require('github-username');
+// const githubUsername = require('github-username');
 
-(async () => {
-	github.managerPrompts(await githubUsername(data.github));
-})();
+// (async () => {
+// 	github.managerPrompts(await githubUsername(data.github));
+// })();
 
 function managerPrompts() {
     return inquirer.prompt([

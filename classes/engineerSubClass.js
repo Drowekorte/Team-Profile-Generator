@@ -1,11 +1,14 @@
 class Engineer extends Employee {
-    constructor(id, employeeName, employeeEmail) {
-        super(github, getRole);
+    constructor(id, name, email) {
+        super(github)
         this.github = github;
-        this.getGithub = getGithub;
+      
+        getGithub(){
+            return (data.github);
+        };
     };
 }
 
-const engineerEmployee = new Engineer(data.id, data.getRole, data.getofficeNumber);
+// const engineerEmployee = new Engineer(data.id, data.getRole, data.getofficeNumber);
 
 module.exports = Engineer

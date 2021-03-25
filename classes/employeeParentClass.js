@@ -1,14 +1,13 @@
-const index = require("../index.js")
 
 class Employee {
     constructor(id, employeeName, employeeEmail,) {
         this.id = id;
-        this.employeeName = employeeName;
-        this.employeeEmail = employeeEmail;
+        this.name = name;
+        this.email = email;
     }
 };
 
-const generateNewEmployee = new Employee (this.id, this.employeeName, this.employeeEmail);
+// const generateNewEmployee = new Employee (this.id, this.employeeName, this.employeeEmail);
 // generateNewEmployee.writeToFile();
 
 
