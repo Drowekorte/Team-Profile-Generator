@@ -1,7 +1,8 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const { engineerPrompts, internPrompts, managerPrompts } = require("./prompt/prompts");
-const Employee = require("./classes/employeeParentClass.js");
+const Employee = require("./classes/Employee.js");
+const Engineer = require("./classes/Engineer.js");
 // const githubUsername = require('github-username');
 // const generateHTML = require("./util/generateHTML.js");
 
@@ -31,7 +32,10 @@ function employeeInfo() {
                 switch (employee.type) {
                     case "Engineer":
                         return engineerPrompts().then(function(engineer){
-                            employeeInfo();
+                            console.log(engineer)
+                            // employeeInfo();
+                            let newEngineer = new Engineer(engineer.id, engineer.name, engineer.email, engineer.github)
+                            console.log(newEngineer)
                         });
                     case "Intern":
                         return internPrompts().then(function(intern){

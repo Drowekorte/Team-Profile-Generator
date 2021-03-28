@@ -34,7 +34,7 @@ function engineerPrompts() {
     return inquirer.prompt([
         {
             type: 'input',
-            name: 'employeeName',
+            name: 'name',
             message: 'What is their name?',
         },
         {
@@ -44,7 +44,7 @@ function engineerPrompts() {
         },
         {
             type: 'input',
-            name: 'employeeEmail',
+            name: 'email',
             message: `What is their email?`,
         },
         {
