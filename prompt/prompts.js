@@ -64,7 +64,7 @@ function internPrompts() {
         },
         {
             type: 'input',
-            name: 'employeeName',
+            name: 'employeeId',
             message: 'What is their id?',
         },
         {
